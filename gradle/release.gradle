@@ -27,7 +27,7 @@ subprojects {
                 from components.java
                 groupId 'com.github.jmnarloch'
                 artifactId project.name
-                version version
+                version rootProject.version
             }
         }
     }
@@ -44,7 +44,7 @@ subprojects {
             licenses = ['Apache-2.0']
             vcsUrl = 'https://github.com/jmnarloch/spring-cloud-config-refresh.git'
             version {
-                name = version
+                name = rootProject.version
             }
         }
     }
