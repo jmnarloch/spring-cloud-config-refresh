@@ -1,0 +1,45 @@
+plugins {
+    id "com.github.hierynomus.license" version '0.11.0'
+    id 'net.researchgate.release' version '2.1.2'
+    id "com.jfrog.bintray" version '1.2'
+}
+
+apply plugin: 'idea'
+
+apply from: 'libraries.gradle'
+
+sourceCompatibility = 1.7
+
+group = "com.github.jmnarloch"
+archivesBaseName="spring-cloud-config-refresh"
+
+ext {
+    isReleaseVersion = !version.endsWith("SNAPSHOT")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
+
+idea {
+    project {
+
+        languageLevel = '1.7'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
+subprojects {
+    
+    apply plugin: 'java'
+    apply plugin: 'idea'
+}
+
+apply from: 'gradle/license.gradle'
+apply from: 'gradle/release.gradle'

@@ -1,0 +1,7 @@
+
+dependencies {
+
+	compile project(':spring-cloud-config-refresh')
+    compile (libraries.springBootActuator)
+    compile (libraries.springCloudConfig)
+}

@@ -1,0 +1,15 @@
+ext {
+
+    springBootVersion = '1.2.5.RELEASE'
+    springCloudVersion = '1.0.3.RELEASE'
+
+    libraries = [
+
+            springBootActuator   : "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}",
+            springBootTest   : "org.springframework.boot:spring-boot-starter-test:${springBootVersion}",
+            springCloudConfig   : "org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}",
+
+            junit        : 'junit:junit:4.12',
+            mockito      : 'org.mockito:mockito-all:1.10.19'
+    ]
+}
