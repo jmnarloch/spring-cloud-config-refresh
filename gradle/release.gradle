@@ -1,7 +1,9 @@
-subprojects {
 
-    apply plugin: 'signing'
-    apply plugin: 'net.researchgate.release'
+apply plugin: 'net.researchgate.release'
+
+subprojects {
+    
+    apply plugin: 'com.jfrog.bintray'
     apply plugin: 'maven'
     apply plugin: 'maven-publish'
 
@@ -18,18 +20,13 @@ subprojects {
     artifacts {
         archives javadocJar, sourcesJar
     }
-
-    signing {
-        required { isReleaseVersion && gradle.taskGraph.hasTask("uploadArchives") }
-        sign configurations.archives
-    }
-
+    
     publishing {
         publications {
             ProjectPublication(MavenPublication) {
                 from components.java
                 groupId 'com.github.jmnarloch'
-                artifactId 'spring-cloud-config-refresh'
+                artifactId project.name
                 version version
             }
         }
@@ -61,5 +58,5 @@ subprojects {
             pushToCurrentBranch = false
         }
     }
-    afterReleaseBuild.dependsOn uploadArchives
+    afterReleaseBuild.dependsOn bintrayUpload
 }
