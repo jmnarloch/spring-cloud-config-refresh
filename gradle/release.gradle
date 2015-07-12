@@ -28,6 +28,9 @@ subprojects {
                 groupId 'com.github.jmnarloch'
                 artifactId project.name
                 version rootProject.version
+
+                artifact sourcesJar 
+                artifact javadocJar
             }
         }
     }
