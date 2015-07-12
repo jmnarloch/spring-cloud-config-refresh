@@ -1,0 +1,4 @@
+
+Spring Cloud Config
+
+image::https://api.bintray.com/packages/jmnarloch/maven/spring-cloud-config-refresh/images/download.svg[link="https://bintray.com/jmnarloch/maven/spring-cloud-config-refresh/_latestVersion"]
