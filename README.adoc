@@ -4,7 +4,9 @@ Jakub Narloch <j.narloch@gmail.com>
 :sectnums:
 
 Spring Cloud Config automatic refresh
+
 image:https://travis-ci.org/jmnarloch/spring-cloud-config-refresh.svg?branch=master["Build Status", link="https://travis-ci.org/jmnarloch/spring-cloud-config-refresh"]
+
 image::https://api.bintray.com/packages/jmnarloch/maven/spring-cloud-config-refresh/images/download.svg[link="https://bintray.com/jmnarloch/maven/spring-cloud-config-refresh/_latestVersion"]
 
 == Features
