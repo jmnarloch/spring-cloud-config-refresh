@@ -1,4 +1,45 @@
+= Spring Cloud Config Refresh
+Jakub Narloch <j.narloch@gmail.com>
+:toc: left
+:sectnums:
 
-Spring Cloud Config
+Spring Cloud Config automatic refresh
 
 image::https://api.bintray.com/packages/jmnarloch/maven/spring-cloud-config-refresh/images/download.svg[link="https://bintray.com/jmnarloch/maven/spring-cloud-config-refresh/_latestVersion"]
+
+== Features
+
+Adds automatic "pull" feature of configuration from Spring Cloud Config Server with configurable delay.
+
+== Setup
+
+In order to setup refresh you have to add fallowing dependency to your Cloud Config Client.
+
+[source, xml]
+----
+
+<dependency>
+  <groupId>com.github.jmnarloch</groupId>
+  <artifactId>spring-cloud-starter-config-refresh</artifactId>
+  <version>1.0.0</version>
+</dependency>
+
+----
+
+== Configuration
+
+Afterwards set the refresh interval (in seconds) in your `application.yml`
+
+[source, yml]
+----
+
+spring:
+    cloud:
+        config:
+            refreshInterval: 600
+
+----
+
+== Pulling configuration
+
+This will configure your Cloud Config client to automatically pull the configuration from the server every 10 minutes
