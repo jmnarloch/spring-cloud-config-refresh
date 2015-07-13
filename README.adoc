@@ -42,4 +42,4 @@ spring:
 
 == Pulling configuration
 
-This will configure your Cloud Config client to automatically pull the configuration from the server every 10 minutes
+This will configure your Cloud Config client to automatically pull the configuration from the server every 10 minutes.
